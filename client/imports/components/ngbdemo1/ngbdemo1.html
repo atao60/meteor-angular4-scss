@@ -1,0 +1,56 @@
+<div class="container-fluid">
+	<div style="text-align:center">
+			  <h1>
+				Welcome to {{extrait(title)}}
+			  </h1>			  
+			</div>
+
+			  <button class="btn btn-primary" type="submit">Primary</button>
+			  <button class="btn btn-success" type="submit">Success</button>
+			  <button class="btn btn-info" type="submit">Info</button>
+			  <button class="btn btn-light" type="submit">Light</button>
+			  <button class="btn btn-warning" type="submit">Warning</button>
+			  <button class="btn btn-danger" type="submit">Danger</button>
+			  <button class="btn btn-dark" type="submit">Dark</button>
+		
+
+
+            <div ngbDropdown 
+                 placement="bottom-left" 
+                 class="btn-group">
+              <button class="btn btn-outline-success" 
+                      id="dropdownBasic2" 
+                      ngbDropdownToggle>Toggle dropdown</button>
+              <div ngbDropdownMenu 
+                   aria-labelledby="dropdownBasic2">
+				<button class="dropdown-item">Action - 1</button>
+				<button class="dropdown-item">Another Action</button>
+				<button class="dropdown-item">Something else is here</button>
+			  </div>
+			</div>
+			
+			<br>
+			
+			<label class="switch">
+			  <input id="onoff" type="checkbox" value="Off" id="onoff" (click)="onoff('test')">
+			  <span class="slider round"></span>
+			</label>
+
+			<div *ngIf="getStatusOnoff()">  
+			  <p [ngStyle]="{color:'#2196F3'}">{{getStatusOnoff()}}</p>
+			</div> 
+			<div *ngIf="!getStatusOnoff()">  
+			  <p [ngStyle]="{color:'grey'}">{{getStatusOnoff()}}</p>
+			</div> 
+
+			<div id="output"></div>
+
+			<div [align]="alignement">
+                Personne : {{person}} | Age : {{age}} | 
+                <adresse-comp [monAdresse]='address' 
+                              (emitValue)='address=$event'></adresse-comp></div>
+			<p>{{address.id}}</p>
+
+            <p>{{testMethodFunction()}}</p>
+            			
+</div>

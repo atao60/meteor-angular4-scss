@@ -1,0 +1,31 @@
+// modifications variables bootstrap - à placer avant import bootstrap et enlever !default
+$green:   #006666;
+$blue:   #003366;
+$red:	#660000;
+$cyan:	#99cccc;
+$yellow: #ff9900; 
+
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar {
+    background-color: #e3f2fd;
+	//background-color: $cyan;
+	//background-color: lighten($blue, 25%)
+}
+
+$btn-padding-x-xs: .38rem !default;
+$btn-padding-y-xs: .18rem !default; 
+$line-height: 1rem !default;
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-sm, $line-height, $border-radius);
+}
+
+// autres imports/styles
+
+/* See (but only for font-awesome):
+ * Not resolving imports correctly #239
+ * https://github.com/fourseven/meteor-scss/issues/239	
+ */
+// @import "{}/node_modules/font-awesome/scss/font-awesome.scss";
+@import "stylesheets/font-awesome.scss";

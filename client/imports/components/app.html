@@ -1,0 +1,30 @@
+<div class="container-fluid">
+
+	<nav *ngIf="_navigationService.get()" 
+		 id="navigation" 
+		 class="navbar navbar-expand-lg navbar-light sticky-top container-fluid"
+		 routerLinkActive="active">
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown" ngbDropdown placement="bottom-left">
+					<a class="nav-link btn-outline-info" id="navbarDropdownMenuLink" ngbDropdownToggle>
+						Demos
+					</a>
+					<div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" routerLink="/demo1">Angular Bootstrap</a>
+					</div>
+				</li>
+                <li class="nav-item btn-outline-info">
+						<a class="nav-link" routerLink="/help">Help</a>
+				</li>
+			</ul>
+		</div>
+
+	</nav>
+
+	<div>
+		<router-outlet> </router-outlet>
+	</div>
+
+</div>
