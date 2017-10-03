@@ -1,6 +1,7 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import 'reflect-metadata'; // here location matters: has to be before import of AppModule
+                           // and even before other imports under Windows
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './imports/components/app.module';
 
