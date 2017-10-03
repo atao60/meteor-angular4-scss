@@ -10,3 +10,9 @@ To run this demo:
 
     >meteor npm install
     >meteor
+
+Under Windows, such a launching may freeze (see [Meteor stuck at starting your app](
+	https://forums.meteor.com/t/meteor-stuck-at-starting-your-app/25592)). Then use an external instance of Meteor. With the default port:
+
+    >set MONGO_URL=mongodb://localhost:27017/db
+    >meteor
